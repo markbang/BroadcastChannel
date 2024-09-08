@@ -17,15 +17,15 @@ export async function GET(Astro) {
     title: channel.title,
     description: channel.description,
     site: url.origin,
+    customData: `<follow_challenge>
+    <feedId>55528531020249088</feedId>
+    <userId>54789014498934784</userId>
+</follow_challenge>`,
     items: posts.map(item => ({
       link: `posts/${item.id}`,
       title: item.title,
       description: item.description,
       pubDate: new Date(item.datetime),
-      customData: `<follow_challenge>
-    <feedId>55528531020249088</feedId>
-    <userId>54789014498934784</userId>
-</follow_challenge>`,
       content: sanitizeHtml(item.content, {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'video', 'audio']),
         allowedAttributes: {
