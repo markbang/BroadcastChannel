@@ -126,7 +126,7 @@ STATIC_PROXY=
 GOOGLE_SEARCH_SITE=memo.miantiao.me
 
 ## Enable tags page, separate tags with commas
-TAGS=tag1,tag2,tag3
+TAGS=tag1,tag2,tag3,...
 
 ## Show comments
 COMMENTS=true
